@@ -1,0 +1,228 @@
+Tugas
+
+Jawablah pertanyaan-pertanyaan berikut ini dan simpan jawaban ke dalam 
+sebuah file dengan nama tugas1 praktikum.txt dan push ke dalam branch 
+praktikum01 di repository web-2
+
+1. Jelaskan apa yang dimaksud dengan dokumen root?
+
+2. Pada apache web server, apakah dokumen root harus terletak dalam 
+direktori C:\xampp\htdocs? Jelaskan jawaban anda
+
+3. Jelaskan apa yang dimaksud dengan perintah git: init, clone, remote, 
+add, commit, push dan checkout
+
+4. Jelaskan perbedaan antara GitHub dan GitLab
+
+5. Apa bedanya variable user dengan variable system?
+
+6. Apa persamaan variable system dengan variable constant?
+
+Jawaban
+
+1.  Dokumen root (root document) atau sering juga disebut document root 
+    directory adalah direktori utama yang menjadi tempat menyimpan file-file 
+    website yang dapat diakses oleh publik melalui web server. Ini adalah 
+    folder dasar dimana semua file website seperti HTML, CSS, JavaScript, 
+    gambar dan file lainnya disimpan.
+
+
+2.  Tidak, dokumen root pada Apache web server tidak harus selalu berada 
+    di C:\xampp\htdocs. Lokasi tersebut hanya merupakan lokasi default yang 
+    ditetapkan oleh XAMPP.
+    Anda dapat mengubah lokasi dokumen root sesuai kebutuhan dengan cara:
+    1. Mengubah konfigurasi di file httpd.conf Apache
+    2. Menggunakan Virtual Host untuk mengelola beberapa website dengan 
+    dokumen root yang berbeda
+
+    Alasan mengapa Anda mungkin ingin mengubah lokasi dokumen root:
+    Mengelola beberapa website terpisah
+    Menyesuaikan dengan struktur organisasi proyek
+    Menempatkan file website di drive atau partisi yang berbeda
+    Kebutuhan keamanan tertentu
+    Menyesuaikan dengan workflow development tim.
+
+    Yang perlu diperhatikan saat mengubah lokasi dokumen root:
+    Pastikan folder baru memiliki permission yang tepat
+    Web server harus memiliki akses ke lokasi baru
+    Restart Apache setelah melakukan perubahan konfigurasi
+    Backup konfigurasi lama sebelum melakukan perubahan
+
+
+3.  Saya akan menjelaskan perintah-perintah dasar Git tersebut:
+
+    git init
+    Menginisialisasi repository Git baru di direktori kerja
+    Membuat folder tersembunyi .git yang berisi semua informasi yang 
+    diperlukan Git digunakan saat memulai project baru dari awal
+
+    git clone
+    Membuat salinan repository yang sudah ada ke komputer lokal
+    Syntax: git clone <url-repository>
+    Otomatis mendownload semua data dan file dari repository beserta 
+    history perubahannya
+
+    git remote
+    Mengelola koneksi ke repository remote (jarak jauh) seperti GitHub
+    Perintah umum:
+
+    git remote add origin <url> - Menambah remote repository
+    git remote -v - Melihat daftar remote yang terhubung
+    git remote remove <nama> - Menghapus koneksi ke remote
+
+    git add
+    Menambahkan file ke staging area sebelum di-commit
+    Contoh penggunaan:
+
+    git add . - Menambah semua perubahan
+    git add nama-file - Menambah file tertentu saja
+    git add *.html - Menambah semua file HTML
+
+    git commit
+    Menyimpan perubahan yang ada di staging area ke repository
+    Selalu menyertakan pesan commit yang menjelaskan perubahan
+    Contoh: git commit -m "Menambah fitur login"
+
+    git push
+    Mengirim perubahan yang sudah di-commit ke repository remote
+    Syntax umum: git push origin nama-branch
+    Digunakan untuk mempublikasikan perubahan lokal ke server
+
+    git checkout
+    Berpindah antara branch atau commit
+    Penggunaan:
+    git checkout nama-branch - Pindah ke branch lain
+    git checkout -b nama-branch - Membuat dan pindah ke branch baru
+    git checkout commit-hash - Melihat kode pada commit tertentu
+
+
+4.  Berikut adalah perbedaan utama antara GitHub dan GitLab:
+    1. Model Hosting dan Pengelolaan:
+    - GitHub: Terutama berbasis cloud, dengan opsi self-hosting terbatas 
+      (GitHub Enterprise)
+    - GitLab: Menawarkan fleksibilitas lebih dengan opsi cloud 
+      (GitLab.com) dan self-hosting (GitLab Community/Enterprise Edition)
+
+    2. Fitur CI/CD (Continuous Integration/Continuous Deployment):
+    - GitHub: Menggunakan GitHub Actions, perlu konfigurasi terpisah
+    - GitLab: CI/CD terintegrasi langsung, dengan pipeline yang lebih 
+      komprehensif dan mudah dikonfigurasi
+
+    3. Manajemen Proyek:
+    - GitHub: Memiliki Projects dan Issues board yang sederhana
+    - GitLab: Menawarkan fitur manajemen proyek yang lebih lengkap 
+      seperti issue boards, milestones, time tracking, dan Epic
+
+    4. Harga dan Paket:
+    - GitHub: Gratis untuk repository publik, paket berbayar untuk fitur 
+      private
+    - GitLab: Menawarkan lebih banyak fitur dalam versi gratisnya, 
+      termasuk repository private
+
+    5. Visibility Repository:
+    - GitHub: Public dan Private
+    - GitLab: Public, Private, dan Internal (dapat diakses semua user yang 
+      terautentikasi)
+
+    6. Security Features:
+    - GitHub: Security scanning lebih fokus pada dependensi
+    - GitLab: Fitur keamanan lebih komprehensif termasuk SAST, DAST, 
+      container scanning
+
+    7. Dokumentasi:
+    - GitHub: Menggunakan GitHub Pages dengan fokus pada dokumentasi 
+      project
+    - GitLab: Menyediakan Wiki dan Pages dengan kemampuan dokumentasi 
+      yang lebih luas
+
+    8. Antarmuka Pengguna:
+    - GitHub: UI lebih sederhana dan user-friendly untuk pemula
+    - GitLab: UI lebih kompleks dengan banyak fitur terintegrasi
+
+    9. Komunitas:
+    - GitHub: Memiliki komunitas yang lebih besar dan lebih populer di 
+      kalangan open source
+    - GitLab: Lebih populer di kalangan enterprise dan tim pengembangan 
+      internal
+
+    10. Import/Export:
+    - GitHub: Import terbatas dari beberapa platform
+    - GitLab: Menawarkan opsi import/export yang lebih luas termasuk dari 
+      GitHub
+
+    Pemilihan antara keduanya biasanya tergantung pada:
+    - Kebutuhan spesifik project
+    - Ukuran tim
+    - Budget
+    - Kebutuhan hosting (cloud vs self-hosted)
+    - Kompleksitas workflow yang dibutuhkan
+    - Integrasi dengan tools lain
+
+
+5.  Variabel user dan variabel system memiliki beberapa perbedaan penting:
+    Variabel User:
+    1. Scope (Cakupan)
+    - Hanya berlaku untuk user tertentu
+    - Tersimpan dalam profil pengguna
+    - Tidak mempengaruhi pengguna lain dalam sistem yang sama
+
+    2. Penyimpanan
+    - Pada Windows: Tersimpan di HKEY_CURRENT_USER dalam registry
+    - Pada Linux: Biasanya tersimpan di home directory user 
+      (~/.bashrc, ~/.profile)
+
+    3. Pengaturan
+    - Dapat diubah oleh pengguna tanpa memerlukan hak admin
+    - Perubahan hanya berdampak pada session user tersebut
+    - Biasanya diatur melalui control panel atau command line biasa
+
+    Variabel System:
+    1. Scope (Cakupan)
+    - Berlaku untuk seluruh sistem operasi
+    - Dapat diakses oleh semua pengguna
+    - Mempengaruhi cara kerja aplikasi dan sistem secara global
+
+    2. Penyimpanan
+    - Pada Windows: Tersimpan di HKEY_LOCAL_MACHINE dalam registry
+    - Pada Linux: Biasanya tersimpan di /etc/environment atau /etc/profile
+
+    3. Pengaturan
+    - Memerlukan hak administrator untuk mengubahnya
+    - Perubahan berdampak pada seluruh pengguna sistem
+    - Biasanya diatur melalui System Properties atau memerlukan sudo/admin 
+      privileges
+
+    Contoh penggunaan:
+    - Variabel User: PATH untuk aplikasi personal, pengaturan bahasa user
+    - Variabel System: JAVA_HOME, instalasi program sistem, konfigurasi 
+      sistem operasi
+
+
+6.  Variabel system dan variabel constant memiliki beberapa persamaan:
+    1. Sifat Relatif Tetap
+    - Keduanya cenderung tidak sering diubah setelah ditetapkan
+    - Digunakan sebagai referensi yang konsisten dalam program/sistem
+    - Perubahan pada keduanya dapat mempengaruhi cara kerja sistem/program
+
+    2. Cakupan Luas
+    - Dapat diakses dari berbagai bagian program/sistem
+    - Berfungsi sebagai nilai referensi global
+    - Digunakan sebagai standar dalam operasi sistem/program
+
+    3. Pentingnya Keamanan
+    - Perubahan pada keduanya perlu dikontrol dengan ketat
+    - Memerlukan otorisasi khusus untuk mengubahnya
+    - Perubahan yang tidak tepat dapat menyebabkan masalah serius
+
+    4. Tujuan Penggunaan
+    - Digunakan untuk menyimpan nilai-nilai penting
+    - Berfungsi sebagai konfigurasi dasar
+    - Menjadi acuan untuk operasi-operasi lain
+
+    Namun perbedaan utamanya:
+    - Variabel system bisa diubah dengan hak admin, sedangkan constant 
+      benar-benar tidak bisa diubah setelah dideklarasikan
+    - Variabel system berlaku di level sistem operasi, sedangkan constant 
+      berlaku di level program/aplikasi
+    - Variabel system bisa berbeda antar sistem, sedangkan constant tetap 
+      sama selama program tidak diubah
