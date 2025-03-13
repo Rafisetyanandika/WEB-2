@@ -36,7 +36,6 @@
                             <p class="text-muted">Saya adalah Mahasiswa semester 2 di STT Terpadu Nurul Fikri, dan ini adalah data diri saya.</p>
                                 <div class="d-flex justify-content-center fs-2 gap-4">
                                     <a class="text-gradient" href="https://www.instagram.com/rfstyandk?igsh=am1kbnVrdzRsNGJj"><i class="bi bi-instagram"></i></a>
-                                    <a class="text-gradient" href="www.linkedin.com/in/rafi-nandika-188490344"><i class="bi bi-linkedin"></i></a>
                                     <a class="text-gradient" href="https://api.whatsapp.com/send?phone=6289636848362&text="><i class="bi bi-whatsapp"></i></a>
                                 </div>
                             </div>
